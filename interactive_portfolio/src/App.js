@@ -84,18 +84,19 @@ document.body.addEventListener("keyup", (e) => {
   });
   // 공간에 추가합니다.
   World.add(engine.world, box);
-}, false);
+  console.log('aaa');
+});
 
 // 1초 간격으로
-setInterval(() => {
+//setInterval(() => {
   // 가로 중앙, 상단에서 50px 떨어진 곳에 반지름이 10인 원을 만들어서
-  const box = Bodies.circle(windowWidth/2, 50, 10, {
-    friction: 0.2,
-    restitution: 0.8
-  });
+  //const box = Bodies.circle(windowWidth/2, 50, 10, {
+    //friction: 0.2,
+    //restitution: 0.8
+  //});
   // 공간에 추가합니다.
-  World.add(engine.world, box);
-}, 1000);
+  //World.add(engine.world, box);
+//}, 1000);
 
 // 아까 위에 선언한 Matter에서 지정되어 있는 이벤트 인데요.
 // 그중에 'collisionStart'은 오브제 간 충돌의 시작한 시점의 이벤트입니다.
