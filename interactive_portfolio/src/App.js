@@ -75,10 +75,10 @@ Render.run(render);
 // 몇가지 이벤트를 추가합니다.
 
 // render 객체의 canvas는 DOM body에 추가 될 canvas 엘리먼트를 가리킵니다.
-render.canvas.addEventListener("click", (e) => {
+document.body.addEventListener("keyup", (e) => {
   // 캔버스를 마우스로 클릭하면
   // 현재 마우스 위치에 반지름이 10인 원을 만들어서
-  const box = Bodies.circle(e.offsetX, e.offsetY, 10, {
+  const box = Bodies.circle(windowWidth/2, 50, 10, {
     friction: 0.2,
     restitution: 0.8
   });
@@ -110,20 +110,7 @@ Events.on(engine, "collisionStart", (event) => {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
