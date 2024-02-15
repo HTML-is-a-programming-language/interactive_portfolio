@@ -84,7 +84,7 @@ document.body.addEventListener("keyup", (e) => {
   });
   // 공간에 추가합니다.
   World.add(engine.world, box);
-  console.log('aaa');
+  console.log(e.key);
 });
 
 // 1초 간격으로
@@ -102,7 +102,7 @@ document.body.addEventListener("keyup", (e) => {
 // 그중에 'collisionStart'은 오브제 간 충돌의 시작한 시점의 이벤트입니다.
 Events.on(engine, "collisionStart", (event) => {
   // 오브제들이 충돌하면 console.log를 출력합니다.
-  console.log('collision');
+  //console.log('collision');
 });
 // 첫번째 글이라 자세히 적진 않았지만 인자로 받은 event의 값으로
 // 충돌한 오브제 A와 오브제 B를 구분하여 이벤트를 처리해 줄 수도 있습니다.
@@ -111,7 +111,7 @@ Events.on(engine, "collisionStart", (event) => {
 function App() {
   return (
     <div className="App">
-
+      <input type="text" id="insert" />
     </div>
   );
 }
